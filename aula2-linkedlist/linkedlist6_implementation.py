@@ -19,7 +19,7 @@ class LinkedList:
         temp = self.head
         while temp is not None:
             print(temp.value)
-            temp = temp.next
+            temp = temp.next;
 
 
     def append(self, value):  # Recebe o valor para adicionar
