@@ -13,7 +13,7 @@
     - É preciso iterar sobre a lista para adicionar o elemento no pior caso.
 
 
-'TABELA DE COMPARAÇÃO ENTRE LINKED LIST E LIST DO PYTHON
+'''TABELA DE COMPARAÇÃO ENTRE LINKED LIST E LIST DO PYTHON
 
                 LL      List
 Append          O(1)    O(1)
@@ -23,4 +23,4 @@ Pop First       O(1)    O(n)
 Insert          O(n)    O(n)
 Remove          O(n)    O(n)
 Lookup by Index O(n)    O(1)
-Lookup by Value O(n)    O(n)'
+Lookup by Value O(n)    O(n)'''
