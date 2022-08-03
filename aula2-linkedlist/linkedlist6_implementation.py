@@ -7,6 +7,7 @@ class Node:
         self.value = value
         self.next = None
 
+
 class LinkedList:
     def __init__(self, value):
         new_node = Node(value)
@@ -19,10 +20,10 @@ class LinkedList:
         temp = self.head
         while temp is not None:
             print(temp.value)
-            temp = temp.next;
+            temp = temp.next
 
 
-    def append(self, value):  # Recebe o valor para adicionar
+    def append(self, value):  # Recebe o valor para adicionar no final da lista
         new_node = Node(value)  # Instancio para trabalhar como um nó inicial e isolado
         if self.length == 0:  # Verifico se a lista está vazia
             self.head = new_node  # Se estiver vazia, insiro o nó na lista. Digo que a cabeça e a cauda da lista é o valor inserido, pois só terá ele, já que previamente estava vazia.
@@ -34,8 +35,28 @@ class LinkedList:
         return True  # Retorna True para ser usado em outro momento por outro método.
 
 
-    def pop(self):
-        pass # TODO
+    def pop(self):  # Retirar o último elemento, não importa qual seja
+        if self.length == 0:  # Se a lista estiver vazia, retira nada.
+            return None
+
+        tail_guardado = self.tail  # Se ela não está vazia, tem pelo menos 1 elemento. Guardo o último elemento.
+
+        if self.length == 1:  # Se tiver 1 elemento...
+            self.head = None  # ...digo que a lista agora é vazia.
+            self.tail = None
+            self.length = 0  # De tamanho 0, e retorno o valor que guardei, afinal era o único.
+            return tail_guardado
+
+        else:  # Tendo dois ou mais elementos
+            temp = self.head  # Uso uma variável temporária pra iterar sobre a lista.
+            while temp.next.next:  # Procuro sempre o próximo do próximo do nó, se for None, sai do loop.
+                temp = temp.next  # Pego o próximo e atribuo ao atual. Assim posso trabalhar com o próximo do próximo do próximo, etc...
+            temp.next = None  # Ao achar o final da lista, digo que o próximo do último aponta pra nada.
+            self.tail = temp  # E finalmente atribuo como a nova cauda da lista.
+            self.length -= 1  # Diminuo o tamanho dela
+            return tail_guardado  # Retorno o que foi, antes de tudo, guardado como último da lista.
+
+
 
 
     def prepend(self):
