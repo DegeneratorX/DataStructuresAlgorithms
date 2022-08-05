@@ -5,7 +5,7 @@ Implementação completa da lista encadeada simples, com todos os métodos poss�
 class Node:
     def __init__(self, value):
         self.value = value
-        self.next = None
+        self.next = None    # VALUE -> NONE
 
 
 class LinkedList:

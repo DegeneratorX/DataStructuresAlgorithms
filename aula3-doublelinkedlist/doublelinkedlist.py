@@ -13,7 +13,7 @@ class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
-        self.prev = None
+        self.prev = None  # Novo atributo de instância de um nó, o que aponta pro antes.   NONE <- VALUE -> NONE
 
 
 class DoublyLinkedList:
@@ -44,21 +44,21 @@ class DoublyLinkedList:
         return True
 
 
-    def pop(self):
+    def pop(self):  # Devido o duplo encadeamento, não preciso iterar, logo a operação é O(1)
         if self.length == 0:
             return None
 
-        tail_guardado = self.tail
+        tail_guardado = self.tail  # Guardo o último elemento
 
-        if self.length == 1:
+        if self.length == 1:  # Se tiver só um elemento, faz a mesma coisa da lista encadeada simples.
             self.head = None
             self.tail = None
             self.length -= 1
             return tail_guardado
         
-        self.tail = self.tail.prev
-        self.tail.next = None
-        tail_guardado.prev = None
+        self.tail = self.tail.prev  # Guardo o elemento anterior à cauda.
+        self.tail.next = None  # Aponto esse elemento anterior pra nada
+        tail_guardado.prev = None  # o nó retirado aponta pra nada na parte de trás. Na parte da frente já não apontava pra nada.
         self.length -= 1
         return tail_guardado
 
