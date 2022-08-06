@@ -22,7 +22,8 @@ class BinarySearchTree:
             self.root = new_node  # Insere apenas.
             return True
 
-        temp = self.root  # Variável para iterar na árvore. Não quero modificar o self.root, é meu único ponto de referência, não posso perdê-lo ou a árvore terá valores perdidos e será impercorrível.
+        temp = self.root  # Variável para iterar na árvore. Não quero modificar o self.root, é meu único ponto de referência, não posso perdê-lo ou a árvore
+                          # terá valores perdidos e será impercorrível.
         while True:  # Looping while, pois será breakado com returns.
             if new_node.value == temp.value:  # Se o nó inserido tiver valor igual a algum nó na árvore, é impossível inserir.
                 return False
@@ -40,6 +41,14 @@ class BinarySearchTree:
                 temp = temp.right  # Caso contrário, continuará percorrendo a árvore pela direita e essa ramificação.
 
 
+    def contains(self, value):
+        pass # TODO
+
+
+    def min_value(self):
+        pass # TODO
+
+    
 abb = BinarySearchTree()
 
 abb.insert(2)
