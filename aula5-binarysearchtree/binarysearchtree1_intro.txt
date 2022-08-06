@@ -1,0 +1,87 @@
+- Árvore Binária de Busca
+
+    - É basicamente uma lista encadeada simples, mas com ponteiros para esquerda e direita
+    Para esquerda aponta para um nó Nulo ou nó com valor menor que o valor do nó atual
+    Para direita aponta para um nó Nulo ou nó com valor maior que o valor do nó atual
+
+Exemplo:
+       4
+     /   \
+    3     23
+   / \    / \
+  1   2  10  27
+
+Interpretação por meio de dicionario:
+Tree = {
+    "value": 4,
+    "left":{
+        "value": 3,
+        "left":{
+            "value": 1,
+            "left": None,
+            "right": None
+        },
+        "right":{
+            "value": 2,
+            "left": None,
+            "right": None
+        }
+    },
+    "right":{
+        "value": 23,
+        "left":{
+            "value": 10,
+            "left": None,
+            "right": None
+        },
+        "right":{
+            "value": 27,
+            "left": None,
+            "right": None
+        }
+    }
+}
+
+#####################################
+
+- Full Tree
+    - É uma árvore onde todos os nodes apontam para zero ou dois nós.
+
+       4
+     /   \
+    3     23
+   / \
+  1   2
+
+- Perfect Tree
+    - É uma árvore onde qualquer ramificação é perfeitamente preenchida com 
+    leafs até uma altura h.
+
+       4
+     /   \
+    3     23
+   / \    / \
+  1   2  10  27
+
+- Caso especial onde não se categoriza por nenhum dos dois:
+
+       4
+     /   \
+    3     23
+   / \    /
+  1   2  10
+
+#####################################
+
+            4 <- Parent
+          /   \
+         3     23 <- Child e Parent
+        / \    / \
+       1   2  10  27 <- Child e Leaf
+
+- Cada nó só pode ter 1 parent. 
+    - Se tiver dois parents, não é um árvore.
+
+- Filhos (Children) também podem ser Pai (parent) de outros nodes.
+    - Se o nó filho não for pai (ou seja, não tiver filhos), é uma folha (leaf). 
+    - É impossível ser os dois ao mesmo tempo.

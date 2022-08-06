@@ -1,0 +1,67 @@
+- Suponha uma árvore com um nó apenas:
+
+        4
+      /   \
+    None  None
+
+    Então temos 2¹ - 1 = 1 nó
+
+- Suponha agora outras ramificações:
+
+       4
+     /   \
+    3     23
+
+    2² - 1 = 3 nós
+
+- E mais uma:
+
+       4
+     /   \
+    3     23
+   / \    / \
+  1   2  10  27
+
+    2³ - 1 = 7 nós
+
+- Então temos que quando a árvore se ramifica +1, o expoente aumenta +1. Ou seja, 2**k - 1 elementos para uma árvore de altura k.
+- Perceba que com isso podemos ignorar a constante -1 e levar em consideração apenas 2**k, pois para n super grande, tirar -1 nó do cálculo é despresível.
+- Levando isso em consideração, temos que k representa a quantidade de operações para buscar um nó específico na árvore, e 2**k o número de nós (= n).
+- Portanto, se o número de nós aumenta abruptamente, por exemplo, 1 bilhão de nós, temos que k aumentará relativamente pouco, aprox. k = 30 (operações), ou seja, 2**30 ~ 1bi nós.
+- Podemos concluir que é uma estrutura de busca eficiente, onde 2**k = n => log n = k operações. Portanto, tem ordem aprox. O(log n)
+
+- O(log n) é alcançado através da divisão e conquista. Ou seja, se eu busco o número 10...
+
+       4
+     /   \              
+    3     23      =>     23    =>    10
+   / \    / \           / \
+  1   2  10  27        10  27
+
+    ... basicamente vou desconsiderando procurar pelo menos metade da árvore. Ou seja, pra 1 bihão de nós, vou cortando rapidamente
+    o número de nós que preciso procurar pela metade e jogo a outra metade no lixo, pois sei que não vou usar. E faço sucessivas 
+    vezes até o número de nós para busca ficar rapidamente pequeno e encontrar o valor desejado.
+
+- Os exemplos acima são de perfect trees, mas as que não são também são aproximadamente O(log n), não são exatamente, mas são bem próximas.
+
+- E outro caso a se considerar é a árvore onde o nó a ser buscado é simplesmente dessa forma...
+
+       4
+         \
+          23
+            \
+             27
+              \
+               etc...
+                 \
+                  102 <- nó desejado
+                    \
+                    None
+
+- Nesse caso temos um problema. Quanto mais próximo desse cenário, mais O(log n) se "aproxima" de O(n).
+    - E portanto, torna-se uma busca em uma lista encadeada. Ao iterar, ocorre O(n) operações no exemplo.
+    - Vale ressaltar que esse é o pior caso possível em uma árvore binária de busca. É um dos poucos algoritmos que ignorarei
+     esse fator de busca, pois se trata de equivalência a uma lista encadeada simples, algo já documentado por mim aqui no github.
+    - Portanto, para buscas no geral, será aprox. O(log n) em melhores ou médios casos.
+
+    - lookup(), insert() e remove() serão todos considerados O(log n)
