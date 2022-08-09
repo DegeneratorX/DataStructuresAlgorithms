@@ -6,6 +6,11 @@ Lista Duplamente Encadeada
 "next": None,
 "prev": None
 }
+
+SOBRE LISTA ENCADEADA CIRCULAR DUPLA
+    Para a maioria, se não todos os métodos, sempre que terminar as linhas de código para cada condicional ou antes de returns, acrescentar
+    self.tail.next = self.head e self.head.prev = self.tail automaticamente torna a lista circular, pois o próximo da cauda apontará pra cabeça e o anterior da cabeça
+    apontará para a cauda.
 """
 
 

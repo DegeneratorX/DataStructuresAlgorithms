@@ -1,5 +1,10 @@
 """
 Implementação completa da lista encadeada simples, com todos os métodos possíveis de modificação da lista.
+
+
+SOBRE LISTA ENCADEADA CIRCULAR SIMPLES
+    Para a maioria, se não todos os métodos, sempre que terminar as linhas de código para cada condicional ou antes de returns, acrescentar
+    self.tail.next = self.head automaticamente torna a lista circular, pois o próximo da cauda apontará pra cabeça.
 """
 
 class Node:
