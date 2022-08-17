@@ -9,7 +9,7 @@ class BinarySearchTree:
     # def __init__(self, value):  # MÉTODO ANTIGO PARA INICIALIZAÇÃO DE UMA ESTRUTURA
         # new_node = Node(value)
         # self.root = new_node
-        # self.height = 1
+        # self.height = 1v
 
     def __init__(self):  # MÉTODO NOVO PARA INICIALIZAÇÃO DE UMA ESTRUTURA: A árvore começará vazia.
         self.root = None  # Meio que é equivalente a passar value = None.
