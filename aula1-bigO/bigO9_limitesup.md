@@ -50,6 +50,6 @@
 
             - Não tem como ela ser limitada superiormente por √n, por mais que eu possa multiplicar essa √n por um número.
 
-            - Com essa prova, também prova que:
+            - EXTRA: Com essa prova, também prova que:
                 - f(n) também não é O(log n).
                 - f(n) também não é O(1).
