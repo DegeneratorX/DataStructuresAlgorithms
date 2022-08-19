@@ -20,7 +20,7 @@
             - 5tn + 3t ≤ (8t)∙(n)
             - Ou seja, mostrei que a função inicial f(n) = 5tn - 3t é menor ou igual a uma constante c vezes n.
             - c = 8t, n₀ = 1
-            - Portanto, f(n) é O(g₁(n))
+            - Portanto, f(n) é O(g₁(n)), ou seja, limitada superiormente.
 
         - O(g₂(n)), onde g₂(n) = n²?
 
