@@ -9,8 +9,8 @@
 
         - f(n) ≥ c ∙ g(n) ∀n ≥ n₀
 
-        - Ou seja, f(n) SEMPRE será menor ou igual a c ∙ g(n)
-        - Ou seja, sempre será limitada superiormente por c ∙ g(n)
+        - Ou seja, f(n) SEMPRE será maior ou igual a c ∙ g(n)
+        - Ou seja, sempre será limitada inferiormente por c ∙ g(n)
 
         - ![image](https://user-images.githubusercontent.com/98990221/185800875-a6c2276e-2c7d-41b4-b6b6-b867692e8cca.png)
 
