@@ -9,8 +9,11 @@
 
         - f(n) ≥ c ∙ g(n) ∀n ≥ n₀
 
-        - Ou seja, f(n) SEMPRE será menor ou igual a c ∙ g(n)
-        - Ou seja, sempre será limitada superiormente por c ∙ g(n)
+        - Ou seja, f(n) SEMPRE será maior ou igual a c ∙ g(n)
+        - Ou seja, sempre será limitada inferiormente por c ∙ g(n)
+
+        - ![image](https://user-images.githubusercontent.com/98990221/185801350-0409b3e2-4a02-4de5-9f98-04b1628f9879.png)
+        - Mesmo que eu não saiba a partir de que ponto, eu sei que existe um n₀ tal que a partir dele pra frente, seempre será maior que g(n). Não me interessa o que           vem atrás.
 
     - Ex: f(n) = 5tn + 3t é:
 
