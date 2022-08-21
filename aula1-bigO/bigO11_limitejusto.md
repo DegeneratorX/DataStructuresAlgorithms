@@ -12,6 +12,8 @@
         - Ou seja, sempre será limitada inferiormente por c₁ ∙ g(n) e superiormente por c₂ ∙ g(n).
         - IMPORTANTÍSSIMO: f(n) é Θ(g(n)) sse f(n) é O(g(n)) e é Ω(g(n))
 
+        - ![image](https://user-images.githubusercontent.com/98990221/185801812-f5a25b18-1274-4e3b-942f-cefc43c82bc4.png)
+
     - Ex: f(n) = 5tn + 3t é:
         
         -
