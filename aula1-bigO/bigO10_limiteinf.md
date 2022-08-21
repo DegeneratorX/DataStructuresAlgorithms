@@ -12,7 +12,8 @@
         - Ou seja, f(n) SEMPRE será maior ou igual a c ∙ g(n)
         - Ou seja, sempre será limitada inferiormente por c ∙ g(n)
 
-        - ![image](https://user-images.githubusercontent.com/98990221/185800875-a6c2276e-2c7d-41b4-b6b6-b867692e8cca.png)
+        - ![image](https://user-images.githubusercontent.com/98990221/185801350-0409b3e2-4a02-4de5-9f98-04b1628f9879.png)
+        - Mesmo que eu não saiba a partir de que ponto, eu sei que existe um n₀ tal que a partir dele pra frente, seempre será maior que g(n). Não me interessa o que           vem atrás.
 
     - Ex: f(n) = 5tn + 3t é:
 
