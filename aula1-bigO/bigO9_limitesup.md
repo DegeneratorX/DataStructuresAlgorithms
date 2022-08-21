@@ -13,6 +13,7 @@
         - Ou seja, sempre será limitada superiormente por c ∙ g(n)
 
         - ![image](https://user-images.githubusercontent.com/98990221/185800719-7d2a8e08-016b-43f5-93e1-261d5e6103fc.png)
+        - n₀ é o menor ponto onde f(n) sempre ficará abaixo de c ∙ g(n) (limitada superiormente). O que ocorre antes não interessa.
 
     - Ex: f(n) = 5tn + 3t é:
 
