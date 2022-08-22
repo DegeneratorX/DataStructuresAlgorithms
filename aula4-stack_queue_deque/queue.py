@@ -7,9 +7,6 @@ O primeiro elemento que entrar é o primeiro a sair.
 FIFO (First in, First out)
 """
 
-from hashlib import new
-
-
 class Node:
     def __init__(self, value):
         self.value = value
